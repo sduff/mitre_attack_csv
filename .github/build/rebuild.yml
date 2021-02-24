@@ -1,0 +1,25 @@
+name: Rebuild the CSV from the latest JSON data
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: build
+      run: python mitre_attack_csv.py
+    - name: push
+      uses: actions-x/commit@v2
+      files: enterprise-attack.csv
+      
