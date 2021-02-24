@@ -17,8 +17,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+    - name: dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
     - name: build
-      run: python mitre_attack_csv.py
+      run: |
+        python mitre_attack_csv.py
     - name: push
       uses: actions-x/commit@v2
       with:
