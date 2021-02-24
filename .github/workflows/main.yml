@@ -3,8 +3,7 @@ name: Rebuild the CSV from the latest JSON data
 on:
   workflow_dispatch:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/15 * * * *'
+    - cron:  '13 * * * *'
   
 jobs:
   build:
