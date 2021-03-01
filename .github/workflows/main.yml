@@ -3,7 +3,7 @@ name: Rebuild the CSV from the latest JSON data
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '13 * * * *'
+    - cron:  '13 1 * * *'
   
 jobs:
   build:
