@@ -5,7 +5,7 @@ import json
 import requests
 
 
-url = "https://github.com/mitre/cti/raw/master/enterprise-attack/enterprise-attack.json"
+url = "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
 outfile = "enterprise-attack.csv"
 
 print("Fetching latest enterprise-attack.json ...")
